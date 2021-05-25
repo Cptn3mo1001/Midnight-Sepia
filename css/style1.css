@@ -1,0 +1,219 @@
+.example {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+html {
+  --clr-500: #402915;
+  --clr-400: #734C29;
+  --clr-300: #A67449;
+  --clr-200: #D9AB82;
+  --clr-100: #F2D5BB;
+
+  --ff-primary: "Balsamiq", cursive;
+  --ff-accent: "Luckiest Guy", cursive;
+
+  --clr-bg: hsl(323 21% 16%);
+  --clr-main: #09fbd3;
+
+
+  box-sizing: border-box;
+}
+html[data-theme='dark'] {
+  --clr-500: #bfd6ea;
+  --clr-400: #8cb3d6;
+  --clr-300: #598bb6;
+  --clr-200: #26547d;
+  --clr-100: #0d2a44;
+}
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 250ms !important;
+  transition-delay: 0 !important;
+}
+body {
+  background-color: var(--clr-200);
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.mainLog {
+  font-size: 20em;
+  font-family: var(--ff-accent);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 40%;
+  letter-spacing: 5px;
+  position: absolute;
+  left: 10rem;
+}
+.mainLog img {
+  width: 16%;
+  height: 16%;
+  border-radius: 50%;
+}
+
+.mainLog h1 {
+  background-color: var(--clr-100);
+  color: var(--clr-200);
+  padding-inline: 1em;
+  border-radius: 3em;
+}
+nav {
+  height: 15vh;
+  background-color: var(--clr-200);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:flex-end;
+  box-shadow: 0px 0px 20px var(--clr-300);
+}
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+
+}
+.mainBar {
+  background-color: var(--clr-100);
+  height: 100%;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.onePlate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10rem 15rem;
+  text-align: center;
+}
+.onePlate h1 {
+  color: var(--clr-400);
+  font-size: 10rem;
+}.onePlate h6 {
+  color: var(--clr-300);
+  font-size: 5rem;
+  width: 65rem;
+  margin-top: 2rem;
+}
+
+.mPlate {
+  font-size: 4rem;
+  font-family: var(--ff-primary);
+  font-weight: 500;
+  color: var(--clr-300);
+  text-align: justify;
+  max-width: 65rem;
+  margin-bottom: 4rem;
+}
+.pA {
+  margin-block: 2rem;
+}
+
+.pullerButt {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.puller {
+  width: 8rem;
+}
+.pulley {
+  height: 20%;
+  width: 15%;
+}
+
+.dropMenu {
+  font-size: 4rem;
+  position: absolute;
+  top: -30rem;
+  right: 5%;
+
+  display: flex;
+  flex-direction: column;
+  height: 20%;
+  width: 15%;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background-color: var(--clr-100);
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: 0 0 20px var(--clr-300);
+  transition: 1s;
+}
+.dropMenu a {
+  text-decoration: none;
+  color: var(--clr-300);
+}
+.dropMenu input {
+  display: none;
+}
+.darkText {
+  color: var(--clr-500);
+  font-family: Balsamiq, sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  cursor: pointer;
+}
+.dropBox {
+  transition: all 500ms ease-in-out;
+}
+.dropBox-active {
+  top: 0rem;
+}
+.menu {
+  position: relative;
+}
+.menuContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  top: -40rem;
+  right: 10vh;
+
+  transition: all 500ms ease-in-out;
+  animation: swingAnim 1s infinite linear;
+}
+.menuContainer-active {
+  top: -10rem;
+}
+.menuContainer-dark {
+  filter: invert(1);
+}
+
+.scrollTop {
+  position: fixed;
+  bottom: 3%;
+  right: 3%;
+
+  cursor: pointer;
+
+  background: none;
+  border: none;
+  border-radius: 50%;
+}
+.scrollTop img {
+  width: 5vh;
+}
+.scrollTop-dark {
+  filter: invert(1);
+}
